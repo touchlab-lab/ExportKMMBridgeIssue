@@ -37,11 +37,7 @@ kotlin {
                 implementation(libs.ktor.client.okHttp)
             }
         }
-        val androidTest by getting {
-            dependencies {
-                implementation(libs.bundles.shared.androidTest)
-            }
-        }
+
         val iosMain by getting {
             dependencies {
                 implementation(libs.sqlDelight.native)
