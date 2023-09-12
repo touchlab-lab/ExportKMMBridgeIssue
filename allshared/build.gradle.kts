@@ -2,7 +2,6 @@
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("co.touchlab.faktory.kmmbridge")
     `maven-publish`
 }
 
@@ -44,16 +43,4 @@ kotlin {
             isStatic = true
         }
     }
-}
-
-addGithubPackagesRepository()
-
-kmmbridge {
-    mavenPublishArtifacts()
-    githubReleaseVersions()
-//    Android version is not automatically incremented in KMMBridge, so if you need it to be aligned with the iOS version
-//    use manualVersions instead of githubReleaseVersions to set version manually
-//    manualVersions()
-    spm()
-//    cocoapods("git@github.com:touchlab/PodSpecs.git")
 }
